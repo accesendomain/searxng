@@ -134,7 +134,7 @@ from searx.search.checker import get_result as checker_get_result
 logger = logger.getChild('webapp')
 
 # check secret_key
-if not searx_debug and settings['server']['secret_key'] == 'ultrasecretkey':
+if not searx_debug and settings['server']['secret_key'] == 'Doceri123@':
     logger.error('server.secret_key is not changed. Please use something else instead of ultrasecretkey.')
     sys.exit(1)
 
@@ -1329,7 +1329,8 @@ if not werkzeug_reloader or (werkzeug_reloader and os.environ.get("WERKZEUG_RUN_
 def run():
     logger.debug('starting webserver on %s:%s', settings['server']['bind_address'], settings['server']['port'])
     app.run(
-        debug=searx_debug,
+        debug=True,
+        #debug=searx_debug,
         use_debugger=searx_debug,
         port=settings['server']['port'],
         host=settings['server']['bind_address'],

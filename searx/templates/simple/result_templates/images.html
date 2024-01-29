@@ -8,8 +8,9 @@
                 <a class="result-detail-close" href="#">{{ icon('close') }}</a>{{- "" -}}
                 <a class="result-detail-previous" href="#">{{ icon('chevron-left') }}</a>{{- "" -}}
                 <a class="result-detail-next" href="#">{{ icon('chevron-right') }}</a>{{- "" -}}
-                <a class="result-images-source" {% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %} href="{{ result.img_src }}">
+                <a class="result-images-source">
                         <img src="" data-src="{{ image_proxify(result.img_src) }}" alt="{{ result.title|striptags }}">{{- "" -}}
+                        <a href="{{ result.url }}" class="img-tooltip"><div>Open Image source</div></a>
                 </a>{{- "" -}}
                 <div class="result-images-labels">{{- "" -}}
                         <h4>{{ result.title|striptags }}</h4>{{- "" -}}
@@ -18,8 +19,8 @@
                         <p class="result-author">{%- if result.author %}<span>{{ _('Author') }}:</span>{{ result.author|striptags }}{% else %}&nbsp;{% endif -%}</p>{{- "" -}}
                         <p class="result-format">{%- if result.img_format %}<span>{{ _('Format') }}:</span>{{ result.img_format }}{% else %}&nbsp;{% endif -%}</p>{{- "" -}}
                         <p class="result-source">{%- if result.source %}<span>{{ _('Source') }}:</span>{{ result.source }}{% else %}&nbsp;{% endif -%}</p>{{- "" -}}
-                        <p class="result-engine"><span>{{ _('Engine') }}:</span>{{ result.engine }}</p>{{- "" -}}{{- "" -}}
                         <p class="result-url"><span>{{ _('View source') }}:</span><a {% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %} href="{{ result.url }}">{{ result.url }}</a></p>{{- "" -}}
+                        <a href="https://link" style="padding-top: 10px; font-size: 13px; color: #878787;">Image may be subject to copyright.</a>
                 </div>{{- "" -}}
         </div>{{- "" -}}
 </article>

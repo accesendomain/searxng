@@ -50,7 +50,7 @@ categories = ['general', 'web']
 paging = True
 max_page = 50
 time_range_support = True
-safesearch = True
+safesearch = False
 
 time_range_dict = {'day': 'd', 'week': 'w', 'month': 'm', 'year': 'y'}
 

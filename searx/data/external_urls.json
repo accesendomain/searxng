@@ -1,4 +1,11 @@
 {
+    "meta_official": {
+        "category_name": "Meta Official Website",
+        "url_name": "Meta Official Website",
+        "urls": {
+            "default": "https://about.fb.com/$1"
+        }
+    },
     "facebook_profile": {
         "category_name": "Facebook",
         "url_name": "Facebook profile",
